@@ -13,3 +13,10 @@ def test_check_drinks():
                    'lime juice', 'salt', 'english cucumber']
     assert check_drinks(
         'Honeydew Cucumber', ingredients) == 'Honeydew Cucumber Mocktail'
+
+
+def test_check_drink_alcohol():
+    ingredients = ['cinnamon stick', 'scotch', 'whole cloves',
+                   'ginger', 'pomegranate juice', 'sugar', 'club soda']
+    assert check_drinks(
+        'Shirley Tonic', ingredients) == 'Shirley Tonic Cocktail'
