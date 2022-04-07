@@ -19,4 +19,4 @@ def check_drinks(drink_name: str, drink_ingredients: list) -> str:
     for ingredient in drink_ingredients:
         if ingredient in ALCOHOLS:
             return drink_name + ' Cocktail'
-        return drink_name + ' Mocktail'
+    return drink_name + ' Mocktail'
