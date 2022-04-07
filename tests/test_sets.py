@@ -1,4 +1,4 @@
-from scripts.set import *
+from scripts.sets import *
 
 
 def test_clean_ingredients():
