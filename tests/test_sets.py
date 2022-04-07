@@ -6,3 +6,10 @@ def test_clean_ingredients():
                    'peppercorns', 'cumin powder', 'chickpeas', 'coriander powder', 'red chili powder', 'ground turmeric', 'garam masala', 'chickpeas', 'ginger', 'cilantro']
     assert clean_ingredients('Punjabi-Style Chole', ingredients) == ('Punjabi-Style Chole', {'garam masala', 'bay leaves', 'ground turmeric', 'ginger', 'garlic paste', 'peppercorns',
                                                                                              'ginger paste', 'red chili powder', 'cardamom', 'chickpeas', 'cumin powder', 'vegetable oil', 'tomatoes', 'coriander powder', 'onions', 'cilantro', 'cloves'})
+
+
+def test_check_drinks():
+    ingredients = ['honeydew', 'coconut water', 'mint leaves',
+                   'lime juice', 'salt', 'english cucumber']
+    assert check_drinks(
+        'Honey Cucumber', ingredients) == 'Honeydew Cucumber Mocktail'
