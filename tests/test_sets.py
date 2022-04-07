@@ -12,4 +12,4 @@ def test_check_drinks():
     ingredients = ['honeydew', 'coconut water', 'mint leaves',
                    'lime juice', 'salt', 'english cucumber']
     assert check_drinks(
-        'Honey Cucumber', ingredients) == 'Honeydew Cucumber Mocktail'
+        'Honeydew Cucumber', ingredients) == 'Honeydew Cucumber Mocktail'
