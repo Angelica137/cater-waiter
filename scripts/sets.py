@@ -16,8 +16,7 @@ def check_drinks(drink_name: str, drink_ingredients: list) -> str:
     if it is a mocktail or a cocktail.
     Returns a string with the drinks name and its category (mocktail or cocktail)
     """
-    ingredients = set(drink_ingredients)
-    if ingredients.isdisjoint(ALCOHOLS):
+    if set(drink_ingredients).isdisjoint(ALCOHOLS):
         return drink_name + ' Mocktail'
     return drink_name + ' Cocktail'
 
