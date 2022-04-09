@@ -20,3 +20,10 @@ def test_check_drink_alcohol():
                    'ginger', 'pomegranate juice', 'sugar', 'club soda']
     assert check_drinks(
         'Shirley Tonic', ingredients) == 'Shirley Tonic Cocktail'
+
+
+def test_categorise_dish():
+    ingredients = ['tofu', 'soy sauce', 'salt', 'black pepper', 'cornstarch', 'vegetable oil',
+                   'garlic', 'ginger', 'water', 'vegetable stock', 'lemon juice', 'lemon zest', 'sugar']
+    assert categorise_dish("Sticky Lemon Tofu",
+                           ingredients) == 'Sticky Lemon Tofu: VEGAN'
