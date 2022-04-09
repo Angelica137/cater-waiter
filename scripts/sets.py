@@ -1,4 +1,4 @@
-from data.sets_categories_data import ALCOHOLS
+from data.sets_categories_data import *
 
 
 def clean_ingredients(dish_name: str, dish_ingredients: list) -> tuple:
@@ -16,7 +16,15 @@ def check_drinks(drink_name: str, drink_ingredients: list) -> str:
     if it is a mocktail or a cocktail.
     Returns a string with the drinks name and its category (mocktail or cocktail)
     """
-    for ingredient in drink_ingredients:
-        if ingredient in ALCOHOLS:
-            return drink_name + ' Cocktail'
-    return drink_name + ' Mocktail'
+    ingredients = set(drink_ingredients)
+    if ingredients.isdisjoint(ALCOHOLS):
+        return drink_name + ' Mocktail'
+    return drink_name + ' Cocktail'
+
+
+def categorise_dish(dish_name: str, dish_ingredients: set) -> str:
+    """
+    Checks the dish's ingredients against the categories sets and
+    returns the dish's name and its category.
+    """
+    pass
