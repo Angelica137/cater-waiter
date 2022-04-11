@@ -26,5 +26,5 @@ def categorise_dish(dish_name: str, dish_ingredients: set) -> str:
     Checks the dish's ingredients against the categories sets and
     returns the dish's name and its category.
     """
-    if set(dish_ingredients).union(VEGAN):
+    if set(dish_ingredients).issubset(VEGAN):
         return dish_name + ': VEGAN'
