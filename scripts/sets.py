@@ -26,5 +26,9 @@ def categorise_dish(dish_name: str, dish_ingredients: set) -> str:
     Checks the dish's ingredients against the categories sets and
     returns the dish's name and its category.
     """
-    if set(dish_ingredients).issubset(VEGAN):
-        return dish_name + ': VEGAN'
+    categories = [VEGAN, VEGETARIAN, PALEO, KETO, OMNIVORE]
+    for category in categories:
+        if set(dish_ingredients).issubset(category):
+            category_name = [name for name in globals() if globals()[
+                name] is category]
+            return dish_name + ': ' + str(category_name[0])
