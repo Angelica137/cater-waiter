@@ -35,3 +35,11 @@ def test_categorise_dish_omnivore():
     dish_name = 'Shrimp Bacon and Crispy Chickpea Tacos with Salsa de Guacamole'
     assert categorise_dish(
         dish_name, ingredients) == 'Shrimp Bacon and Crispy Chickpea Tacos with Salsa de Guacamole: OMNIVORE'
+
+
+def test_special_ingredients():
+    name = 'Ginger Glazed Tofu Cutlets'
+    ingredients = ['tofu', 'soy sauce', 'ginger', 'corn starch',
+                   'garlic', 'brown sugar', 'sesame seeds', 'lemon juice']
+    assert special_ingredients((name, ingredients)) == (
+        'Ginger Glazed Tofu Cutlets', {'garlic', 'soy sauce', 'tofu'})
