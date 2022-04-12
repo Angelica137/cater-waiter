@@ -43,3 +43,11 @@ def test_tag_special_ingredients():
                    'garlic', 'brown sugar', 'sesame seeds', 'lemon juice']
     assert tag_special_ingredients((name, ingredients)) == (
         'Ginger Glazed Tofu Cutlets', {'garlic', 'soy sauce', 'tofu'})
+
+
+def test_tag_special_ingredients_2():
+    name = 'Arugula and Roasted Pork Salad'
+    ingredients = ['pork tenderloin', 'arugula', 'pears', 'blue cheese',
+                   'pine nuts', 'balsamic vinegar', 'onions', 'black pepper']
+    assert tag_special_ingredients((name, ingredients)) == ('Arugula and Roasted Pork Salad', {
+        'pork tenderloin', 'blue cheese', 'pine nuts', 'onions'})
