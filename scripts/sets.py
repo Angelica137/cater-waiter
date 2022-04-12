@@ -1,3 +1,4 @@
+from re import T
 from data.sets_categories_data import *
 
 
@@ -32,3 +33,11 @@ def categorise_dish(dish_name: str, dish_ingredients: set) -> str:
             category_name = [name for name in globals() if globals()[
                 name] is category]
             return dish_name + ': ' + str(category_name[0])
+
+
+def tag_special_ingredients(dish: tuple) -> tuple:
+    """
+    Returns the dish's name plus its ingredients requiring
+    a special note.
+    """
+    return (dish[0], set(dish[1]) & SPECIAL_INGREDIENTS)
