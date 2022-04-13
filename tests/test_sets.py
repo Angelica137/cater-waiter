@@ -54,9 +54,9 @@ def test_tag_special_ingredients_2():
 
 
 def test_compile_ingredients():
-    ingredients_list: [{'tofu', 'soy sauce', 'ginger', 'corn starch', 'garlic', 'brown sugar', 'sesame seeds', 'lemon juice'},
-                       {'pork tenderloin', 'arugula', 'pears', 'blue cheese', 'pine nuts',
-                        'balsamic vinegar', 'onions', 'black pepper'},
-                       {'honeydew', 'coconut water', 'mint leaves', 'lime juice', 'salt', 'english cucumber'}]
+    ingredients_list = [{'tofu', 'soy sauce', 'ginger', 'corn starch', 'garlic', 'brown sugar', 'sesame seeds', 'lemon juice'},
+                        {'pork tenderloin', 'arugula', 'pears', 'blue cheese', 'pine nuts',
+                         'balsamic vinegar', 'onions', 'black pepper'},
+                        {'honeydew', 'coconut water', 'mint leaves', 'lime juice', 'salt', 'english cucumber'}]
     assert compile_ingredients(ingredients_list) == {'arugula', 'brown sugar', 'honeydew', 'coconut water', 'english cucumber', 'balsamic vinegar', 'mint leaves', 'pears', 'pork tenderloin',
                                                      'ginger', 'blue cheese', 'soy sauce', 'sesame seeds', 'black pepper', 'garlic', 'lime juice', 'corn starch', 'pine nuts', 'lemon juice', 'onions', 'salt', 'tofu'}
