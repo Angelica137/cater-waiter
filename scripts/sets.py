@@ -51,11 +51,3 @@ def compile_ingredients(dishes: list) -> set:
     for dish in dishes:
         shopping_list.update(dish)
     return shopping_list
-
-
-x = [{'tofu', 'soy sauce', 'ginger', 'corn starch', 'garlic', 'brown sugar', 'sesame seeds', 'lemon juice'},
-     {'pork tenderloin', 'arugula', 'pears', 'blue cheese', 'pine nuts',
-      'balsamic vinegar', 'onions', 'black pepper'},
-     {'honeydew', 'coconut water', 'mint leaves', 'lime juice', 'salt', 'english cucumber'}]
-
-print(compile_ingredients(x))
