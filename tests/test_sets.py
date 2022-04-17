@@ -72,3 +72,8 @@ def test_separate_appetisers():
 
     assert set(separate_appetisers(dishes, appetisers)) == set(['Vegetarian Khoresh Bademjan', 'Barley Risotto', 'Flank Steak with Chimichurri and Asparagus',
                                                                 'Grilled Flank Steak with Caesar Salad'])
+
+
+def test_singleton_ingredients():
+    assert singleton_ingredients(example_dishes, EXAMPLE_INTERSECTION) == {'vegetable oil', 'vegetable stock', 'barley malt', 'tofu', 'fresh basil', 'lemon', 'ginger', 'honey', 'spaghetti', 'cornstarch', 'yeast', 'red onion',
+                                                                           'breadcrumbs', 'mixed herbs', 'garlic powder', 'celeriac', 'lemon zest', 'sunflower oil', 'mushrooms', 'silken tofu', 'smoked tofu', 'bell pepper', 'cashews', 'oregano', 'tomatoes', 'parsley', 'red pepper flakes', 'rosemary'}
