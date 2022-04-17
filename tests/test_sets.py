@@ -60,3 +60,15 @@ def test_compile_ingredients():
                         {'honeydew', 'coconut water', 'mint leaves', 'lime juice', 'salt', 'english cucumber'}]
     assert compile_ingredients(ingredients_list) == {'arugula', 'brown sugar', 'honeydew', 'coconut water', 'english cucumber', 'balsamic vinegar', 'mint leaves', 'pears', 'pork tenderloin',
                                                      'ginger', 'blue cheese', 'soy sauce', 'sesame seeds', 'black pepper', 'garlic', 'lime juice', 'corn starch', 'pine nuts', 'lemon juice', 'onions', 'salt', 'tofu'}
+
+
+def test_separate_appetisers():
+    dishes = ['Avocado Deviled Eggs', 'Flank Steak with Chimichurri and Asparagus', 'Kingfish Lettuce Cups',
+              'Grilled Flank Steak with Caesar Salad', 'Vegetarian Khoresh Bademjan', 'Avocado Deviled Eggs',
+              'Barley Risotto', 'Kingfish Lettuce Cups']
+    appetisers = ['Kingfish Lettuce Cups', 'Avocado Deviled Eggs', 'Satay Steak Skewers',
+                  'Dahi Puri with Black Chickpeas', 'Avocado Deviled Eggs', 'Asparagus Puffs',
+                  'Asparagus Puffs']
+
+    assert separate_appetisers(dishes, appetisers) == ['Vegetarian Khoresh Bademjan', 'Barley Risotto', 'Flank Steak with Chimichurri and Asparagus',
+                                                       'Grilled Flank Steak with Caesar Salad']
