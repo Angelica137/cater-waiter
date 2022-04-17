@@ -70,5 +70,5 @@ def test_separate_appetisers():
                   'Dahi Puri with Black Chickpeas', 'Avocado Deviled Eggs', 'Asparagus Puffs',
                   'Asparagus Puffs']
 
-    assert separate_appetisers(dishes, appetisers) == ['Vegetarian Khoresh Bademjan', 'Barley Risotto', 'Flank Steak with Chimichurri and Asparagus',
-                                                       'Grilled Flank Steak with Caesar Salad']
+    assert set(separate_appetisers(dishes, appetisers)) == set(['Vegetarian Khoresh Bademjan', 'Barley Risotto', 'Flank Steak with Chimichurri and Asparagus',
+                                                                'Grilled Flank Steak with Caesar Salad'])

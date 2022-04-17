@@ -51,3 +51,11 @@ def compile_ingredients(dishes: list) -> set:
     for dish in dishes:
         shopping_list.update(dish)
     return shopping_list
+
+
+def separate_appetisers(dishes: list, appetizers: list) -> list:
+    """
+    Removes the list of appetisers from the list of dishes to
+    return a list containing only dishes not uses as appetesiers
+    """
+    return list(set(dishes) - set(appetizers))
