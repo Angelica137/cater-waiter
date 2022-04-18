@@ -1,4 +1,3 @@
-from re import T
 from data.sets_categories_data import *
 
 
