@@ -27,7 +27,7 @@ def categorise_dish(dish_name: str, dish_ingredients: set) -> str:
     returns the dish's name and its category.
     """
     categories = [VEGAN, VEGETARIAN, PALEO, KETO, OMNIVORE]
-    for category in categories:
+    for category in categories:  # O(n)
         if set(dish_ingredients).issubset(category):
             category_name = [name for name in globals() if globals()[
                 name] is category]
@@ -47,7 +47,7 @@ def compile_ingredients(dishes: list) -> set:
     Returns a set containing the deduped ingredients in dishes
     """
     shopping_list = set()
-    for dish in dishes:
+    for dish in dishes:  # O(n)
         shopping_list.update(dish)
     return shopping_list
 
@@ -57,7 +57,7 @@ def separate_appetisers(dishes: list, appetizers: list) -> list:
     Removes the list of appetisers from the list of dishes to
     return a list containing only dishes not uses as appetesiers
     """
-    return list(set(dishes) - set(appetizers))
+    return list(set(dishes) - set(appetizers))  # O(n)
 
 
 def singleton_ingredients(dishes: list, INTERSECTIONS: set) -> set:
@@ -65,4 +65,4 @@ def singleton_ingredients(dishes: list, INTERSECTIONS: set) -> set:
     Returns a set contianing the ingredients that are unique for
     particular dishes
     """
-    return compile_ingredients(dishes) - INTERSECTIONS
+    return compile_ingredients(dishes) - INTERSECTIONS  # O(n)
