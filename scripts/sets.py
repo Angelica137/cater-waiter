@@ -46,10 +46,7 @@ def compile_ingredients(dishes: list) -> set:
     """
     Returns a set containing the deduped ingredients in dishes
     """
-    shopping_list = set()
-    for dish in dishes:  # O(n)
-        shopping_list.update(dish)
-    return shopping_list
+    return set.union(*dishes)
 
 
 def separate_appetisers(dishes: list, appetizers: list) -> list:
