@@ -63,5 +63,7 @@ def separate_appetisers(dishes: list, appetizers: list) -> list:
 
 def singleton_ingredients(dishes: list, INTERSECTIONS: set) -> set:
     """
-
+    Returns a set contianing the ingredients that are unique for
+    particular dishes
     """
+    return compile_ingredients(dishes) - INTERSECTIONS
