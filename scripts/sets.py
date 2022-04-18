@@ -59,3 +59,9 @@ def separate_appetisers(dishes: list, appetizers: list) -> list:
     return a list containing only dishes not uses as appetesiers
     """
     return list(set(dishes) - set(appetizers))
+
+
+def singleton_ingredients(dishes: list, INTERSECTIONS: set) -> set:
+    """
+
+    """
