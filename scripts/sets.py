@@ -7,7 +7,7 @@ def clean_ingredients(dish_name: str, dish_ingredients: list) -> tuple:
     containing 2 elements, a string, the dishes name, and
     a set containing the deduped ingredients.
     """
-    return (dish_name, set(dish_ingredients))
+    return dish_name, set(dish_ingredients)
 
 
 def check_drinks(drink_name: str, drink_ingredients: list) -> str:
