@@ -26,7 +26,7 @@ def categorise_dish(dish_name: str, dish_ingredients: set) -> str:
     Checks the dish's ingredients against the categories sets and
     returns the dish's name and its category.
     """
-    for category, name in ((VEGAN, "VEGAN"), (VEGETARIAN, "VEGETARIAN"), (PALEO, "PALAEO"), (KETO, "KETO"), (OMNIVORE, "OMNIVORE")):
+    for category, name in ((VEGAN, "VEGAN"), (VEGETARIAN, "VEGETARIAN"), (PALEO, "PALEO"), (KETO, "KETO"), (OMNIVORE, "OMNIVORE")):
         if set(dish_ingredients) <= (set(category)):
             return f"{dish_name}: {name}"
 
